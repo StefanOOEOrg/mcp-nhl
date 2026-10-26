@@ -1,6 +1,7 @@
 # mcp-nhl
 
 [![CI](https://github.com/StefanOOEOrg/mcp-nhl/actions/workflows/ci.yml/badge.svg)](https://github.com/StefanOOEOrg/mcp-nhl/actions/workflows/ci.yml)
+[![M8ven Verified](https://m8ven.ai/badge/mcp/stefanooeorg-mcp-nhl-xtlnqx?variant=verified)](https://m8ven.ai/mcp/stefanooeorg-mcp-nhl-xtlnqx)
 
 An [MCP](https://modelcontextprotocol.io) server for the **public NHL APIs** —
 scores, standings, schedules, rosters, player landing pages, game logs,
