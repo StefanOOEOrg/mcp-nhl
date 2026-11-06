@@ -33,3 +33,15 @@ jobs:
         run: python -m pytest -q
       - name: Lint
         run: python -m ruff check src tests
+  # Aggregate gate: one required check for every job of this workflow.
+  # A separate job instead of a matrix check because a ruleset name must stay stable
+  # while the matrix keeps changing.
+  ci-ok:
+    needs: [test]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail unless the test job succeeded
+        run: |
+          echo "test: ${{ needs.test.result }}"
+          [ "${{ needs.test.result }}" = "success" ]
