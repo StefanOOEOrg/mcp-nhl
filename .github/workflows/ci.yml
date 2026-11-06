@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -e '.[dev]'
       - name: Tests
-        run: python -m pytest -q
+        run: python -m pytest -q --ci-ok-red-proof
       - name: Lint
         run: python -m ruff check src tests
   # Aggregate gate: one required check for every job of this workflow.
